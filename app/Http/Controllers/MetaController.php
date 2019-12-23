@@ -10,10 +10,18 @@ class MetaController extends Controller
 {
     public  function index(Request $request){
         $model_name = $request->query("model_name");
+        $data = [];
         if(!empty($model_name)){
-            return Meta::getFields($model_name);
+            $data = Meta::getFields($model_name);
+        } else {
+            $data = Meta::getModels();
         }
-        return Meta::getModels();
+
+        return json_encode([
+            'success'=> true,
+            'message'=> 'success',
+            'data' => $data
+        ]);
     }
 
 }

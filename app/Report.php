@@ -100,18 +100,5 @@ class Report extends Model
         }
         return $DB;
     }
-//    public function reportJoins()
-//    {
-//        return $this->hasMany('App\ReportJoin','report_id');
-//    }
-//
-//    public function reportConditions()
-//    {
-//        return $this->hasMany('App\ReportCondition','report_id');
-//    }
-//
-//    public function reportOrders()
-//    {
-//        return $this->hasMany('App\ReportOrder','report_id');
-//    }
+
 }

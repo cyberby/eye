@@ -17,9 +17,6 @@ class ReportTest extends TestCase
         $response->assertStatus(200);
     }
 
-
-
-
     /**
      * This endpoint adds a report.
      */

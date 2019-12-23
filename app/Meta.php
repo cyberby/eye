@@ -9,25 +9,6 @@ class Meta extends Model
 {
     protected $table = 'metas';
     protected $connection = 'mysql';
-    public function predicates()
-    {
-        return $this->hasMany('App\ReportJoin','predicate');
-    }
-
-    public function predicants()
-    {
-        return $this->hasMany('App\ReportJoin','predicant');
-    }
-
-    public function reportConditions()
-    {
-        return $this->hasMany('App\ReportCondition','meta_id');
-    }
-
-    public function reportOrders()
-    {
-        return $this->hasMany('App\ReportOrder','meta_id');
-    }
 
     public static function getModels(){
         return DB::table("metas")->select("model")->distinct("model")->get();
